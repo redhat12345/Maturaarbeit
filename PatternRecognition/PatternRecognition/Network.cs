@@ -154,6 +154,9 @@ namespace PatternRecognition
                 {
                     prevDelta = s.WeightDelta;
                     s.WeightDelta = learnRate * Gradient * s.FromNeuron.Value;
+                    //s.FromNeuron.Value technically also belongs to the gradient
+                    //For output-weights: (Formula) dW = Alpha * Error * SigmoidDerivative * PreviousOutput
+                    //                       (Code) dW = learnRate * (target - Value) * Value * (1 - Value) * s.FromNeuron.Value
                     s.Weight += s.WeightDelta + momentum * prevDelta;
                 }
             }
