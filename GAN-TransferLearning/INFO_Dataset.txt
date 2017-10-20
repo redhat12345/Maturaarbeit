@@ -1,3 +1,4 @@
 For all of these examples to work you need the 32 or the 64 version of the Pre-trained GAN!
-Due to file size issues, these cannot be dropped on GitHub, they are in the .zip which can be downloaded from here:
+Due to file size issues, these cannot be dropped on GitHub.
+They are in the .zip which can be downloaded from here:
 https://drive.google.com/file/d/0B2QaPL5sETaoSVBIbndLMTRYU3M/view?usp=sharing
