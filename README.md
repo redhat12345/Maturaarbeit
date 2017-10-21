@@ -3,7 +3,7 @@ This work follows from a paper written to qualify for university admission in Sw
 The main idea of this paper was to show that it is possible to apply Transfer Learning to GAN.
 Therefore a GAN was first trained on the huge CelebA-Faces dataset (64x64 Pixel):
 
-![alt text](https://raw.githubusercontent.com/developerator/Maturaarbeit/master/GAN-TransferLearning/CelebA64_results.png)
+![alt text](https://raw.githubusercontent.com/developerator/Maturaarbeit/master/GAN-TransferLearning/CelebA64_results.png "CelebA64")
 
 Then the dataset was radically reduced:
 CelebA64-GAN after 31 epochs of training on 276 images of Blondies:
