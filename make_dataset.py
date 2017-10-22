@@ -90,7 +90,7 @@ if __name__ == '__main__':
 
     SIZE = 32
     NAME = "NAME.h5"
-    output_dir = "WHERE TO PUT THE .h5"     
+    output_dir = "WHERE TO PUT THE h5-FILE"     
     
 
     build_HDF5(args.jpeg_dir)
