@@ -1,5 +1,5 @@
 '''
-Partly written by Tim Ehrensberger.
+By Tim Ehrensberger.
 The base of this code is layed by https://github.com/Zackory/Keras-MNIST-GAN/blob/master/mnist_gan.py and was written by Zackory Erickson
 '''
 
