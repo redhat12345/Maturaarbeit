@@ -1,4 +1,6 @@
 '''
+By Tim Ehrensberger
+
 The base of this code is layed by https://github.com/Zackory/Keras-MNIST-GAN/blob/master/mnist_gan.py and was written by Zackory Erickson
 
 The network structure is loosely inspired by https://github.com/aleju/face-generator by Alexander Jung
@@ -31,8 +33,7 @@ import h5py
 hdf5_file = os.path.join("C:\Daten\Maturaarbeit\celeba_processed", "CelebA_64_data.h5")
 
 with h5py.File(hdf5_file, "r") as hf:
-    X_train = hf["data"] [()] #[()] makes it read the whole thing    
-    #X_train = X_train[:50000]  
+    X_train = hf["data"] [()] #[()] makes it read the whole thing      
     X_train = X_train.astype(np.float32) / 255        
       
 
@@ -73,9 +74,9 @@ generator.add(UpSampling2D(size=(2, 2)))
 generator.add(Convolution2D(128, (h, h), padding='same', kernel_regularizer=reg())) #2
 generator.add(BatchNormalization(axis=1))
 generator.add(LeakyReLU(0.2))
-#Out: 256 x 64 x 64
+#Out: 128 x 64 x 64
 
-#In: 256 x 64 x 64
+#In: 128 x 64 x 64
 generator.add(Convolution2D(3, (h, h), padding='same', kernel_regularizer=reg())) #4
 generator.add(Activation('sigmoid'))
 #Out: 3 x 64 x 64
