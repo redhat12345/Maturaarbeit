@@ -1,5 +1,6 @@
 '''
-Partly written by Tim Ehrensberger.
+By Tim Ehrensberger
+
 The base of this code is layed by https://github.com/Zackory/Keras-MNIST-GAN/blob/master/mnist_gan.py and was written by Zackory Erickson
 '''
 
@@ -46,8 +47,8 @@ reg = lambda: l1_l2(l1=1e-7, l2=1e-7)
 dropout = 0
 
 # Load the old models
-old_discriminator = 'dcgan_discriminator_epoch_2.h5'
-old_generator = 'dcgan_discriminator_epoch_2.h5'
+old_discriminator = 'dcgan64_discriminator_transfer.h5'
+old_generator = 'dcgan64_generator_transfer.h5'
 
 # There is a strange bug if the optimizer is loaded from last network therefore just delete it
 with h5py.File(old_generator, 'a') as f:
