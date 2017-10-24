@@ -49,7 +49,7 @@ dropout = 0
 old_discriminator = 'dcgan_discriminator_epoch_2.h5'
 old_generator = 'dcgan_discriminator_epoch_2.h5'
 
-# There is a strange bug if the optimizer is loaded from last network therefore just delete them
+# There is a strange bug if the optimizer is loaded from last network therefore just delete it
 with h5py.File(old_generator, 'a') as f:
     if 'optimizer_weights' in f.keys():
             del f['optimizer_weights'] 
