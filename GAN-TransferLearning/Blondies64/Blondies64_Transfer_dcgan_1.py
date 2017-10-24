@@ -26,7 +26,7 @@ K.set_image_dim_ordering('th')
 import h5py
 
 # Get hdf5 file
-hdf5_file = os.path.join("PATH TO DATASET", "CelebA_Transfer_64_data.h5")
+hdf5_file = os.path.join("PATH TO DATASET", "Blondies64_Transfer.h5")
 
 with h5py.File(hdf5_file, "r") as hf:
     X_train = hf["data"] [()] #[()] makes it read the whole thing    
