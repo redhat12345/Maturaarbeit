@@ -1,4 +1,6 @@
 '''
+By Tim Ehrensberger
+
 The base of this code is layed by https://github.com/Zackory/Keras-MNIST-GAN/blob/master/mnist_gan.py and was written by Zackory Erickson
 
 The network structure is inspired by https://github.com/aleju/face-generator by Alexander Jung
