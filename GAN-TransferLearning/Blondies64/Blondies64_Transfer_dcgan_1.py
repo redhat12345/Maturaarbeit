@@ -46,8 +46,8 @@ reg = lambda: l1_l2(l1=1e-7, l2=1e-7)
 dropout = 0
 
 # Load the old models
-old_discriminator = 'dcgan_discriminator_epoch_19.h5'
-old_generator = 'dcgan_discriminator_epoch_19.h5'
+old_discriminator = 'dcgan64_discriminator_transfer.h5'
+old_generator = 'dcgan64_generator_transfer.h5'
 
 # There is a strange bug if the optimizer is loaded from last network therefore just delete them
 with h5py.File(old_generator, 'a') as f:
