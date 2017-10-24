@@ -1,6 +1,6 @@
 '''
+Partly written by Tim Ehrensberger.
 The base of this code is layed by https://github.com/Zackory/Keras-MNIST-GAN/blob/master/mnist_gan.py and was written by Zackory Erickson
-It was further developed by Tim Ehrensberger.
 '''
 
 import os
@@ -30,8 +30,7 @@ import h5py
 hdf5_file = os.path.join("PATH TO DATASET", "Blondies64_Transfer.h5")
 
 with h5py.File(hdf5_file, "r") as hf:
-    X_train = hf["data"] [()] #[()] makes it read the whole thing    
-    #X_train = X_train[:50000]  
+    X_train = hf["data"] [()] #[()] makes it read the whole thing        
     X_train = X_train.astype(np.float32) / 255        
       
 
@@ -150,8 +149,7 @@ def train(epochs=1, batchSize=128, save_interval=1, start_at=1):
             noise = np.random.normal(0, 1, size=[batchSize, randomDim])
             yGen = np.ones(batchSize)
             discriminator.trainable = False
-            gloss = gan.train_on_batch(noise, yGen) #<-- only generator is trained because discr. is not trainable
-            #EXPLANATION: generator tries to make the discriminator output 1!
+            gloss = gan.train_on_batch(noise, yGen)
 
         # Store loss of most recent batch from this epoch
         dLosses.append(dloss)
@@ -171,5 +169,5 @@ def assertExists(path):
         os.makedirs(path)
 
 if __name__ == '__main__':	
-    train(100, 128, 1) #test2: 100
+    train(100, 128, 1)
 
